@@ -15,17 +15,13 @@ A simple app that makes a robot detect how far a person is using a normal camera
 
    The code was tested with Python 3.11, PyTorch 2.4.0, OpenCV 4.10.0.84, and timm 1.0.9
 
-2) Run a monocular depth estimation model:
-
-    ```shell
-    python run_monodepth.py
-    ```
-
 ### Usage 
 
 Run a monocular depth estimation model:
 	
-    python run_monodepth.py
+    ```shell
+    python run_monodepth_webcam.py
+    ```
 
 ### Citation & Acknowledgements
 
