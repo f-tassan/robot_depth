@@ -19,9 +19,7 @@ A simple app that makes a robot detect how far a person is using a normal camera
 
 Run a monocular depth estimation model:
 	
-    ```shell
     python run_monodepth_webcam.py
-    ```
 
 ### Citation & Acknowledgements
 
