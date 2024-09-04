@@ -1,6 +1,8 @@
 """Compute depth maps for images in the input folder.
 """
 import os
+os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
+
 import glob
 import torch
 import cv2
@@ -28,7 +30,7 @@ def run(input_path, output_path, model_path, model_type="dpt_hybrid", optimize=T
     print("initialize")
 
     # select device
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
     print("device: %s" % device)
 
     # load network
