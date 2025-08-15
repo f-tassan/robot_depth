@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  robot_depth:
+    build: .
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - DISPLAY=${DISPLAY}
+    devices:
+      - "/dev/video0:/dev/video0"
+    volumes:
+      - .:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
