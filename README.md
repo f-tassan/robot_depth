@@ -1,6 +1,24 @@
 # robot_depth
 A simple app that makes a robot detect how far a person is using a normal camera and make specific actions depending on the distance of the person from the robot
 
+## Run with Docker Compose
+
+1) Build image: 
+
+    ```shell
+    docker-compose build --no-cache
+    ```
+
+   `--no-cache` flag is to build in case you have a previous build
+
+2) Run container: 
+
+    ```shell
+    docker-compose up
+    ```
+
+## Run locally
+
 ### Setup 
 
 1) Download the model weights and place them in the `weights` folder:
